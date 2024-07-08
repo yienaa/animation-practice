@@ -1,0 +1,21 @@
+.gradient-box {
+    padding: 10px;
+    border: 16px solid transparent;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+    conic-gradient(from var(--bg-angle), #f16656, #9c3ad8, #3180e3, #28c38a, #3180e3, #9c3ad8, #f16656) border-box;
+    animation: spin 2.5s infinite linear;
+}
+
+@property --bg-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: '<angle>';
+}
+
+@keyframes spin {
+    to {
+        --bg-angle: 360deg;
+    }
+}
